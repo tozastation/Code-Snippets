@@ -1,0 +1,16 @@
+##################################################################################################
+# Template Service
+##################################################################################################
+apiVersion: v1
+kind: Service
+metadata:
+  name: [App Name]
+  labels:
+    app: [App Name]
+spec:
+  selector:
+    app: [App Name]
+  ports:
+    - port: 3001
+      name: template
+      protocol: TCP

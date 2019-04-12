@@ -1,0 +1,22 @@
+##################################################################################################
+# Template Deployment
+##################################################################################################
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: v1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: [App Name]
+    spec:
+      containers:
+      - name: cocoa
+        image: [Container Registry Path]
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: template
+          containerPort: 3001
+          protocol: TCP
